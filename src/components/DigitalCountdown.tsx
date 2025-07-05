@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from 'react';
 
 const DigitalCountdown = () => {
-  // Start with 24 hours in seconds
-  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
+  // Start with 1 hour in seconds
+  const [timeLeft, setTimeLeft] = useState(60 * 60);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -45,7 +44,7 @@ const DigitalCountdown = () => {
   };
 
   const resetTimer = () => {
-    setTimeLeft(24 * 60 * 60);
+    setTimeLeft(60 * 60);
     setIsActive(false);
   };
 
